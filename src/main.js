@@ -1,7 +1,8 @@
 import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router/index";
-import appAxios from "utils/appAxios";
+import store from "./store/index";
+import { appAxios } from "@/utils/appAxios";
 
 import "@/assets/style.css";
 
@@ -11,6 +12,7 @@ import BookMarkList from "@/components/shared/BookMarkList/index-comp";
 const app = createApp(App);
 
 app.use(router);
+app.use(store);
 app.component("AppHeader", AppHeader);
 app.component("BookMarkList", BookMarkList);
 app.config.globalProperties.$appAxios = appAxios;
