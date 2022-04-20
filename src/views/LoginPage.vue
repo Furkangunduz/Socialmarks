@@ -46,8 +46,8 @@ export default {
                 )
                 .then((res) => {
                     if (res?.data?.length > 0) {
-                        this.$store.commit("setUser", res?.data[0]);
-                        // this.$router.push({ name: "HomePage" });
+                        this.$store.commit("setUser", res.data[0]);
+                        this.$router.push({ name: "HomePage" });
                     } else {
                         alert("kullanıcı bulunamadı");
                     }

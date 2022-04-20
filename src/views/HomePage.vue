@@ -1,8 +1,10 @@
 <template>
-    <AppHeader />
-    <div class="flex flex-row">
-        <SideBar />
-        <BookMarkList />
+    <div>
+        <AppHeader />
+        <div class="flex flex-row">
+            <SideBar />
+            <BookMarkList />
+        </div>
     </div>
 </template>
 <script>
