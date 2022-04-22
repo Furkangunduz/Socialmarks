@@ -17,6 +17,11 @@ const routes = [
         path: "/register",
         component: () => import("@/views/RegisterPage"),
     },
+    {
+        name: "NewBookmark",
+        path: "/new",
+        component: () => import("@/views/NewBookmark"),
+    },
 ];
 
 const router = createRouter({
@@ -36,8 +41,6 @@ router.beforeEach((to, _, next) => {
     if (authRequiredPages.indexOf(to.name) > -1 && isAuth) next();
     if (authRequiredPages.indexOf(to.name) > -1 && !isAuth)
         next({ name: "LoginPage" });
-
-    next();
 });
 
 export default router;
