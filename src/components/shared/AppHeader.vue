@@ -24,6 +24,7 @@
 
             <div v-if="_isAuthenticated" class="ml-auto flex items-center">
                 <button
+                    @click="$router.push({ name: 'NewBookmark' })"
                     class="flex bg-gray-700 hover:bg-black text-white px-3 py-1 rounded-sm text-sm items-center mr-2"
                 >
                     <svg
